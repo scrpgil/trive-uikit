@@ -9,53 +9,45 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface TdBadge {
+    'color': string;
+  }
+  interface TdButton {
+    'color': string;
   }
 }
 
 declare global {
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLTdBadgeElement extends Components.TdBadge, HTMLStencilElement {}
+  var HTMLTdBadgeElement: {
+    prototype: HTMLTdBadgeElement;
+    new (): HTMLTdBadgeElement;
+  };
+
+  interface HTMLTdButtonElement extends Components.TdButton, HTMLStencilElement {}
+  var HTMLTdButtonElement: {
+    prototype: HTMLTdButtonElement;
+    new (): HTMLTdButtonElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'td-badge': HTMLTdBadgeElement;
+    'td-button': HTMLTdButtonElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface TdBadge extends JSXBase.HTMLAttributes<HTMLTdBadgeElement> {
+    'color'?: string;
+  }
+  interface TdButton extends JSXBase.HTMLAttributes<HTMLTdButtonElement> {
+    'color'?: string;
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'td-badge': TdBadge;
+    'td-button': TdButton;
   }
 }
 

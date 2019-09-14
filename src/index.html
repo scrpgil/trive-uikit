@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
-
-  <script type="module" src="/build/trive-uikit.esm.js"></script>
-  <script nomodule src="/build/trive-uikit.js"></script>
-
-</head>
-<body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/earlyaccess/notosansjp.css"
+    />
+    <style>
+      html {
+        font-family: "Noto Sans Japanese", sans-serif;
+      }
+      .title {
+        font-size: 24px;
+      }
+      .test-button {
+        margin-bottom: 12px;
+      }
+      .test-button td-button {
+        font-size: 14px;
+      }
+      .test-badge td-badge .title {
+        margin-bottom: 8px;
+      }
+    </style>
+    <link href="/build/trive-uikit.css" rel="stylesheet" />
+    <script type="module" src="/build/trive-uikit.esm.js"></script>
+    <script nomodule src="/build/trive-uikit.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="title">Button</div>
+      <div class="test-button">
+        <td-button color="main">Main</td-button>
+        <td-button color="main-black">MainBlack</td-button>
+        <td-button color="sub-black">SubBlack</td-button>
+        <td-button color="bg">Background</td-button>
+        <td-button color="light">Light</td-button>
+        <td-button color="border">Border</td-button>
+      </div>
+    </section>
+    <section>
+      <div class="title">Badge</div>
+      <div class="test-badge">
+        <td-badge color="main">Main</td-badge>
+        <td-badge color="main-black">MainBlack</td-badge>
+        <td-badge color="sub-black">SubBlack</td-badge>
+        <td-badge color="bg">Background</td-badge>
+        <td-badge color="light">Light</td-badge>
+        <td-badge color="border">Border</td-badge>
+      </div>
+    </section>
+  </body>
 </html>
