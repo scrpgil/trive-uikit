@@ -1,5 +1,5 @@
 {
-  "name": "trive-uikit",
+  "name": "@scrpgil/trive-uikit",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -27,5 +27,18 @@
   "license": "MIT",
   "dependencies": {
     "@stencil/sass": "^1.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scrpgil/trive-uikit.git"
+  },
+  "keywords": [
+    "UI",
+    "Framework"
+  ],
+  "author": "scrpgil",
+  "bugs": {
+    "url": "https://github.com/scrpgil/trive-uikit/issues"
+  },
+  "homepage": "https://github.com/scrpgil/trive-uikit#readme"
 }
