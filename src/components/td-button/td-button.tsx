@@ -17,6 +17,12 @@ export class Button {
         color: `var(--td-color-${this.color})`,
         border: `1px solid var(--td-color-${this.color})`
       };
+    } else if (this.fill == "clear") {
+      return {
+        backgroundColor: `transparent`,
+        color: `var(--td-color-${this.color})`,
+        border: `none`
+      };
     } else {
       return {
         backgroundColor: `var(--td-color-${this.color})`,
@@ -29,7 +35,9 @@ export class Button {
     return (
       <Host>
         <button
-          class={`${this.disabled ? "button-disabled" : ""} ${this.size} ${this.color}`}
+          class={`${this.disabled ? "button-disabled" : ""} ${this.size} ${
+            this.color
+          }`}
           style={this.setColor()}
           disabled={this.disabled}
         >
