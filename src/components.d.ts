@@ -18,6 +18,24 @@ export namespace Components {
     'fill': string;
     'size': string;
   }
+  interface TdCard {
+    'color': string;
+    'disabled': boolean;
+    'fill': string;
+    'size': string;
+  }
+  interface TdForm {
+    'color': string;
+    'disabled': boolean;
+    'fill': string;
+    'size': string;
+  }
+  interface TdPagination {
+    'color': string;
+    'disabled': boolean;
+    'fill': string;
+    'size': string;
+  }
 }
 
 declare global {
@@ -34,9 +52,30 @@ declare global {
     prototype: HTMLTdButtonElement;
     new (): HTMLTdButtonElement;
   };
+
+  interface HTMLTdCardElement extends Components.TdCard, HTMLStencilElement {}
+  var HTMLTdCardElement: {
+    prototype: HTMLTdCardElement;
+    new (): HTMLTdCardElement;
+  };
+
+  interface HTMLTdFormElement extends Components.TdForm, HTMLStencilElement {}
+  var HTMLTdFormElement: {
+    prototype: HTMLTdFormElement;
+    new (): HTMLTdFormElement;
+  };
+
+  interface HTMLTdPaginationElement extends Components.TdPagination, HTMLStencilElement {}
+  var HTMLTdPaginationElement: {
+    prototype: HTMLTdPaginationElement;
+    new (): HTMLTdPaginationElement;
+  };
   interface HTMLElementTagNameMap {
     'td-badge': HTMLTdBadgeElement;
     'td-button': HTMLTdButtonElement;
+    'td-card': HTMLTdCardElement;
+    'td-form': HTMLTdFormElement;
+    'td-pagination': HTMLTdPaginationElement;
   }
 }
 
@@ -50,10 +89,31 @@ declare namespace LocalJSX {
     'fill'?: string;
     'size'?: string;
   }
+  interface TdCard extends JSXBase.HTMLAttributes<HTMLTdCardElement> {
+    'color'?: string;
+    'disabled'?: boolean;
+    'fill'?: string;
+    'size'?: string;
+  }
+  interface TdForm extends JSXBase.HTMLAttributes<HTMLTdFormElement> {
+    'color'?: string;
+    'disabled'?: boolean;
+    'fill'?: string;
+    'size'?: string;
+  }
+  interface TdPagination extends JSXBase.HTMLAttributes<HTMLTdPaginationElement> {
+    'color'?: string;
+    'disabled'?: boolean;
+    'fill'?: string;
+    'size'?: string;
+  }
 
   interface IntrinsicElements {
     'td-badge': TdBadge;
     'td-button': TdButton;
+    'td-card': TdCard;
+    'td-form': TdForm;
+    'td-pagination': TdPagination;
   }
 }
 
