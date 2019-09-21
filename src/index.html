@@ -14,18 +14,69 @@
     <style>
       html {
         font-family: "Noto Sans Japanese", sans-serif;
+        padding: 30px;
+      }
+      .flex {
+        display: flex;
+      }
+      .title-wrapper {
+        margin-bottom: 12px;
       }
       .title {
-        font-size: 24px;
+        font-size: 22px;
       }
-      .test-button {
+      .test-button,
+      .test-badge {
         margin-bottom: 12px;
+        border: 0.2rem solid #f8f9fa;
+        padding: 1.5em;
+      }
+      .test-button{
+        display: flex;
+        flex-direction: column;
       }
       .test-button td-button {
         font-size: 14px;
+        margin: 4px 4px;
       }
       .test-badge td-badge .title {
         margin-bottom: 8px;
+      }
+      .test-badge td-badge {
+        margin-left: 8px;
+      }
+      .test-badge .text {
+        margin: 12px 0px;
+      }
+      .test-badge .extra-large {
+        font-size: 32px;
+      }
+      .test-badge .extra-large td-badge span {
+        font-size: 22px;
+      }
+      .test-badge .large {
+        font-size: 26px;
+      }
+      .test-badge .large td-badge span {
+        font-size: 18px;
+      }
+      .test-badge .regular {
+        font-size: 20px;
+      }
+      .test-badge .regular td-badge span {
+        font-size: 14px;
+      }
+      .test-badge .small {
+        font-size: 16px;
+      }
+      .test-badge .small td-badge span {
+        font-size: 11px;
+      }
+      .test-badge .extra-small {
+        font-size: 12px;
+      }
+      .test-badge .extra-small td-badge span {
+        font-size: 9px;
       }
     </style>
     <link href="/build/trive-uikit.css" rel="stylesheet" />
@@ -33,27 +84,37 @@
     <script nomodule src="/build/trive-uikit.js"></script>
   </head>
   <body>
+      <div class="flex">
     <section>
-      <div class="title">Button</div>
+      <div class="title-wrapper"><div class="title">Buttons</div></div>
       <div class="test-button">
-        <td-button color="main">Main</td-button>
-        <td-button color="main-black">MainBlack</td-button>
-        <td-button color="sub-black">SubBlack</td-button>
-        <td-button color="bg">Background</td-button>
-        <td-button color="light">Light</td-button>
-        <td-button color="border">Border</td-button>
+          <td-button color="main">Button</td-button>
+          <td-button color="main-black">Button</td-button>
+          <td-button color="sub-black">Button</td-button>
+          <td-button color="bg">Button</td-button>
+          <td-button color="light">Button</td-button>
       </div>
     </section>
-    <section>
-      <div class="title">Badge</div>
+    <section style="margin-left: 50px;">
+      <div class="title-wrapper"><div class="title">Badge</div></div>
       <div class="test-badge">
-        <td-badge color="main">Main</td-badge>
-        <td-badge color="main-black">MainBlack</td-badge>
-        <td-badge color="sub-black">SubBlack</td-badge>
-        <td-badge color="bg">Background</td-badge>
-        <td-badge color="light">Light</td-badge>
-        <td-badge color="border">Border</td-badge>
+        <div class="text extra-large">
+          Example heading<td-badge color="main">New</td-badge>
+        </div>
+        <div class="text large">
+          Example heading<td-badge color="main">New</td-badge>
+        </div>
+        <div class="text regular">
+          Example heading<td-badge color="main">New</td-badge>
+        </div>
+        <div class="text small">
+          Example heading<td-badge color="main">New</td-badge>
+        </div>
+        <div class="text extra-small">
+          Example heading<td-badge color="main">New</td-badge>
+        </div>
       </div>
     </section>
+      </div>
   </body>
 </html>
