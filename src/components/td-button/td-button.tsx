@@ -1,24 +1,38 @@
 import { Component, Host, Prop, h } from "@stencil/core";
-
 @Component({
   tag: "td-button",
   styleUrl: "td-button.scss",
   shadow: true
 })
 export class Button {
-  @Prop() color: string;
- 
+  @Prop() color: string = "";
+  @Prop() size: string = "";
+  @Prop() fill: string = "";
+  @Prop({ reflectToAttr: true }) disabled = false;
+
   setColor() {
-    return {
-      backgroundColor: `var(--td-color-${this.color})`,
-      color: `var(--td-color-${this.color}-contrast)`
-    };
+    if (this.fill == "outline") {
+      return {
+        backgroundColor: `transparent`,
+        color: `var(--td-color-${this.color})`,
+        border: `1px solid var(--td-color-${this.color})`
+      };
+    } else {
+      return {
+        backgroundColor: `var(--td-color-${this.color})`,
+        color: `var(--td-color-${this.color}-contrast)`
+      };
+    }
   }
 
   render() {
     return (
       <Host>
-        <button style={this.setColor()}>
+        <button
+          class={`${this.disabled ? "button-disabled" : ""} ${this.size} ${this.color}`}
+          style={this.setColor()}
+          disabled={this.disabled}
+        >
           <slot />
         </button>
       </Host>

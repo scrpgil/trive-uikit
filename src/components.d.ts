@@ -14,6 +14,9 @@ export namespace Components {
   }
   interface TdButton {
     'color': string;
+    'disabled': boolean;
+    'fill': string;
+    'size': string;
   }
 }
 
@@ -43,6 +46,9 @@ declare namespace LocalJSX {
   }
   interface TdButton extends JSXBase.HTMLAttributes<HTMLTdButtonElement> {
     'color'?: string;
+    'disabled'?: boolean;
+    'fill'?: string;
+    'size'?: string;
   }
 
   interface IntrinsicElements {
