@@ -5,7 +5,7 @@ import { Component, Host, Prop, h } from "@stencil/core";
   shadow: true
 })
 export class Button {
-  @Prop() color: string = "";
+  @Prop() color: string = "main";
   @Prop() size: string = "";
   @Prop() fill: string = "";
   @Prop({ reflectToAttr: true }) disabled = false;
