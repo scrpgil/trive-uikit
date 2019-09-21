@@ -61,4 +61,28 @@
   --td-color-danger-contrast-rgb: 255,255,255;
   --td-color-danger-shade: #c80f0f;
   --td-color-danger-tint: #e62929;
+
+  --td-text-extra-large: 40px;;
+  --td-text-large: 20px;;
+  --td-text-regular: 16px;;
+  --td-text-small: 14px;;
+  --td-text-extra-small: 12px;;
+}
+
+.u-f-extra-large {
+  font-size: var(--td-text-extra-large);
+}
+
+.u-f-large {
+  font-size: var(--td-text-large);
+}
+
+.u-f-regular {
+  font-size: var(--td-text-regular);
+}
+.u-f-small {
+  font-size: var(--td-text-small);
+}
+.u-f-extra-small {
+  font-size: var(--td-text-extra-small);
 }

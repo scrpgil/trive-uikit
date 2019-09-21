@@ -12,11 +12,11 @@ button {
   outline: none;
 }
 .small {
-  font-size: 12px;
+  font-size: var(--td-text-small);
   padding: 8px 30px;
 }
 .large {
-  font-size: 18px;
+  font-size: var(--td-text-large);
   padding: 16px 70px;
 }
 .button-disabled {
