@@ -2,7 +2,8 @@ import { Component, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "td-badge",
-  styleUrl: "td-badge.scss"
+  styleUrl: "td-badge.scss",
+  shadow: true
 })
 export class Badge {
   @Prop() color: string = "main";
