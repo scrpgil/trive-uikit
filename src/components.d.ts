@@ -24,11 +24,9 @@ export namespace Components {
     'fill': string;
     'size': string;
   }
-  interface TdForm {
+  interface TdInput {
     'color': string;
-    'disabled': boolean;
-    'fill': string;
-    'size': string;
+    'value'?: string | null;
   }
   interface TdPagination {
     'color': string;
@@ -59,10 +57,10 @@ declare global {
     new (): HTMLTdCardElement;
   };
 
-  interface HTMLTdFormElement extends Components.TdForm, HTMLStencilElement {}
-  var HTMLTdFormElement: {
-    prototype: HTMLTdFormElement;
-    new (): HTMLTdFormElement;
+  interface HTMLTdInputElement extends Components.TdInput, HTMLStencilElement {}
+  var HTMLTdInputElement: {
+    prototype: HTMLTdInputElement;
+    new (): HTMLTdInputElement;
   };
 
   interface HTMLTdPaginationElement extends Components.TdPagination, HTMLStencilElement {}
@@ -74,7 +72,7 @@ declare global {
     'td-badge': HTMLTdBadgeElement;
     'td-button': HTMLTdButtonElement;
     'td-card': HTMLTdCardElement;
-    'td-form': HTMLTdFormElement;
+    'td-input': HTMLTdInputElement;
     'td-pagination': HTMLTdPaginationElement;
   }
 }
@@ -95,11 +93,9 @@ declare namespace LocalJSX {
     'fill'?: string;
     'size'?: string;
   }
-  interface TdForm extends JSXBase.HTMLAttributes<HTMLTdFormElement> {
+  interface TdInput extends JSXBase.HTMLAttributes<HTMLTdInputElement> {
     'color'?: string;
-    'disabled'?: boolean;
-    'fill'?: string;
-    'size'?: string;
+    'value'?: string | null;
   }
   interface TdPagination extends JSXBase.HTMLAttributes<HTMLTdPaginationElement> {
     'color'?: string;
@@ -112,7 +108,7 @@ declare namespace LocalJSX {
     'td-badge': TdBadge;
     'td-button': TdButton;
     'td-card': TdCard;
-    'td-form': TdForm;
+    'td-input': TdInput;
     'td-pagination': TdPagination;
   }
 }

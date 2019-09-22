@@ -31,7 +31,7 @@
         border: 0.2rem solid #f8f9fa;
         padding: 1.5em;
       }
-      .test-button{
+      .test-button {
         display: flex;
         flex-direction: column;
       }
@@ -84,57 +84,65 @@
     <script nomodule src="/build/trive-uikit.js"></script>
   </head>
   <body>
-      <div class="flex">
-    <section>
-      <div class="title-wrapper"><div class="title">Buttons</div></div>
-      <div class="test-button">
+    <div class="flex">
+      <section>
+        <div class="title-wrapper"><div class="title">Input</div></div>
+        <div class="test-form">
+          <td-input value="input"></td-input>
+        </div>
+      </section>
+    </div>
+    <div class="flex">
+      <section>
+        <div class="title-wrapper"><div class="title">Buttons</div></div>
+        <div class="test-button">
           <td-button color="main">Button</td-button>
           <td-button color="main-black">Button</td-button>
           <td-button color="sub-black">Button</td-button>
           <td-button color="bg">Button</td-button>
           <td-button color="light">Button</td-button>
-      </div>
-      <div class="title-wrapper"><div class="title">Large</div></div>
-      <div class="test-button size">
+        </div>
+        <div class="title-wrapper"><div class="title">Large</div></div>
+        <div class="test-button size">
           <td-button color="main" size="large">Button</td-button>
-      </div>
-      <div class="title-wrapper"><div class="title">Small</div></div>
-      <div class="test-button size small">
+        </div>
+        <div class="title-wrapper"><div class="title">Small</div></div>
+        <div class="test-button size small">
           <td-button color="main" size="small">Button</td-button>
-      </div>
-      <div class="title-wrapper"><div class="title">Outline</div></div>
-      <div class="test-button size small">
+        </div>
+        <div class="title-wrapper"><div class="title">Outline</div></div>
+        <div class="test-button size small">
           <td-button color="main" fill="outline">Button</td-button>
-      </div>
-      <div class="title-wrapper"><div class="title">Clear</div></div>
-      <div class="test-button size small">
+        </div>
+        <div class="title-wrapper"><div class="title">Clear</div></div>
+        <div class="test-button size small">
           <td-button color="main" fill="clear">Button</td-button>
-      </div>
-      <div class="title-wrapper"><div class="title">Disabled</div></div>
-      <div class="test-button size small">
+        </div>
+        <div class="title-wrapper"><div class="title">Disabled</div></div>
+        <div class="test-button size small">
           <td-button color="main" disabled>Button</td-button>
-      </div>
-    </section>
-    <section style="margin-left: 50px;">
-      <div class="title-wrapper"><div class="title">Badge</div></div>
-      <div class="test-badge">
-        <div class="text extra-large">
-          Example heading<td-badge color="main">New</td-badge>
         </div>
-        <div class="text large">
-          Example heading<td-badge color="main">New</td-badge>
+      </section>
+      <section style="margin-left: 50px;">
+        <div class="title-wrapper"><div class="title">Badge</div></div>
+        <div class="test-badge">
+          <div class="text extra-large">
+            Example heading<td-badge color="main">New</td-badge>
+          </div>
+          <div class="text large">
+            Example heading<td-badge color="main">New</td-badge>
+          </div>
+          <div class="text regular">
+            Example heading<td-badge color="main">New</td-badge>
+          </div>
+          <div class="text small">
+            Example heading<td-badge color="main">New</td-badge>
+          </div>
+          <div class="text extra-small">
+            Example heading<td-badge color="main">New</td-badge>
+          </div>
         </div>
-        <div class="text regular">
-          Example heading<td-badge color="main">New</td-badge>
-        </div>
-        <div class="text small">
-          Example heading<td-badge color="main">New</td-badge>
-        </div>
-        <div class="text extra-small">
-          Example heading<td-badge color="main">New</td-badge>
-        </div>
-      </div>
-    </section>
-      </div>
+      </section>
+    </div>
   </body>
 </html>
